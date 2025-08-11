@@ -10,15 +10,8 @@ It is built with Python and Tkinter.
 - Lightweight, no complex setup required
 
 ## Installation
-1. Download or clone the project folder to your computer.
-2. (Optional) Create a virtual environment:
-   ```bash
-   python -m venv venv
-   ```
-3. Install required packages:
-   ```bash
-   pip install pillow
-   ```
+No additional packages are required.  
+Python (with Tkinter) is enough to run this project.
 
 ## Usage
 Run the application with:
