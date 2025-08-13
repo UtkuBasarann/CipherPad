@@ -26,7 +26,7 @@ def save_and_encrypt_notes():
     master_secret = master_secret_input.get()
 
     if len(title) == 0 or len(message) == 0 or len(master_secret) == 0:
-            messagebox.showinfo(title="Error!", message="Please enter all information.")
+            messagebox.showwarning(title="Error!", message="Please enter all information.")
     else:
         message_encrypted = encode(master_secret, message)
 
@@ -40,6 +40,7 @@ def save_and_encrypt_notes():
             title_entry.delete(0, END)
             master_secret_input.delete(0, END)
             input_text.delete("1.0",END)
+            messagebox.showinfo(title="Encryption Successful!", message="Your text has been encrypted and saved successfully.")
 
 #decrypt
 def decrypt_notes():
@@ -54,7 +55,7 @@ def decrypt_notes():
             input_text.delete("1.0", END)
             input_text.insert("1.0", decrypted_message)
         except:
-            messagebox.showinfo(title="Error!", message="Please make sure of encrypted info.")
+            messagebox.showwarning(title="Error!", message="Please make sure of encrypted info.")
 
 #Interface
 window = Tk()
